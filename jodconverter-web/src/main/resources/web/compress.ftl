@@ -32,7 +32,6 @@
     <ul id="treeDemo" class="ztree"></ul>
 </div>
 </body>
-<script type="text/javascript" src="config.js"></script>
 <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
 <script type="text/javascript" src="js/jquery.ztree.core.js"></script>
 <script type="text/javascript">
@@ -68,9 +67,8 @@
                     } else {
                         fulls += ",resizable"; // 对于不支持screen属性的浏览器，可以手工进行最大化。 manually
                     }
-                    window.open(env_config.server_preview_url
-                            + encodeURIComponent(env_config.server_base_url + treeNode.fileName)
-                            + "&needEncode=1", "_blank",fulls);
+                    window.open("onlinePreview?url="
+                            + encodeURIComponent("${baseUrl}" + treeNode.fileName)+"&fileKey="+ encodeURIComponent(treeNode.fileKey), "_blank",fulls);
                 }
             }
         }

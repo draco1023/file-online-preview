@@ -28,7 +28,6 @@ nbdist/
 .classpath
 .project
 **/.settings
-**/bin/
 **/build/
 **/.externalToolBuilders/
 *.iml
@@ -39,3 +38,5 @@ nbdist/
 /.temfile
 .temfile
 convertedFile/
+jodconverter-web/src/main/cache/
+jodconverter-web/src/main/file/
